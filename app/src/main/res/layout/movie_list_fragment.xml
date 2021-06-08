@@ -15,6 +15,7 @@
         android:layout_height="match_parent"
         tools:context="com.example.retrofitrecyclerview.MainActivity">
 
+        <!--"listData" is found in BindingAdapters.kt-->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/movieList"
             android:layout_width="0dp"
@@ -25,7 +26,8 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:listData="@{viewModel.movieList}"
-            tools:itemCount="@{viewModel.movieList.size()}">
+            tools:itemCount="@{viewModel.movieList.size()}"
+            tools:listitem="@layout/movie_list_item">
 
         </androidx.recyclerview.widget.RecyclerView>
     </androidx.constraintlayout.widget.ConstraintLayout>
