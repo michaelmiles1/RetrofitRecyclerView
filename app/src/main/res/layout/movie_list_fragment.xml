@@ -15,7 +15,7 @@
         android:layout_height="match_parent"
         tools:context="com.example.retrofitrecyclerview.MainActivity">
 
-        <!--"listData" is found in BindingAdapters.kt-->
+        <!--"listData" is found in MovieRecyclerViewAdapter.kt-->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/movieList"
             android:layout_width="0dp"

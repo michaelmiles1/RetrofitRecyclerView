@@ -19,7 +19,7 @@ class MovieListFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = MovieListFragmentBinding.inflate(inflater)
+        val binding = MovieListFragmentBinding.inflate(inflater, container, false)
         //This allows binding to observe the LiveData
         binding.lifecycleOwner = this
 
@@ -27,7 +27,7 @@ class MovieListFragment: Fragment() {
         binding.viewModel = viewModel
 
         //Connects an adapter to the xml recyclerView
-        binding.movieList.adapter =
+        binding.movieList.adapter = MovieRecyclerViewAdapter()
 
         //Return binding root as view
         return binding.root
